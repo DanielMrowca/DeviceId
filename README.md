@@ -1,6 +1,7 @@
-# DeviceId
+# DeviceId and *DeviceInfo
 
-A simple library providing functionality to generate a 'device ID' that can be used to uniquely identify a computer.
+A simple library providing functionality to generate a 'device ID' that can be used to uniquely identify a computer.  
+*Also you can retrieve basic information of device ex. machine name, processor id. Go to [Get basic information of device](#get-device-basic-info) to see more information
 
 ## Quickstart
 
@@ -68,7 +69,7 @@ There are a number of encoders that can be used customize the formatter. These i
 * [Base64ByteArrayEncoder](/src/DeviceId/Encoders/Base64ByteArrayEncoder.cs) - Encodes a byte array as a base 64 string.
 * [Base64UrlByteArrayEncoder](/src/DeviceId/Encoders/Base64UrlByteArrayEncoder.cs) - Encodes a byte array as a base 64 url-encoded string.
 
-## Get basic information of device
+## <a name="get-device-basic-info"></a> Get basic information of device
 You can also retrieve basic information of current device using `DeviceInfo` extension.
 ```csharp
     var machineName = DeviceInfo.GetMachineName();
