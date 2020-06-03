@@ -1,16 +1,24 @@
 ﻿using System;
+using System.Net;
 using DeviceId.Components;
 
 namespace DeviceId
 {
-    public static class Extensions
+    public static class DeviceInfo
     {
+        /// <summary>
+        ///     Return host name of device.
+        /// </summary>
+        /// <returns></returns>
+        public static string GetHostName()
+            => Dns.GetHostName();
+
         /// <summary>
         ///     Return current user name of device. 
         /// </summary>
         /// <returns>Current user name of device</returns>
         public static string GetUserName()
-         => Environment.UserName;
+            => Environment.UserName;
 
 
         /// <summary>

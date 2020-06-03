@@ -68,6 +68,16 @@ There are a number of encoders that can be used customize the formatter. These i
 * [Base64ByteArrayEncoder](/src/DeviceId/Encoders/Base64ByteArrayEncoder.cs) - Encodes a byte array as a base 64 string.
 * [Base64UrlByteArrayEncoder](/src/DeviceId/Encoders/Base64UrlByteArrayEncoder.cs) - Encodes a byte array as a base 64 url-encoded string.
 
+## Get basic information of device
+You can also retrieve basic information of current device using `DeviceInfo` extension.
+```csharp
+    var machineName = DeviceInfo.GetMachineName();
+    var OSVersion = DeviceInfo.GetOSVersion();
+    var processorId = DeviceInfo.GetProcessorId();
+    [...]
+```
+
+
 ## Cross-platform support
 
 The following cross-platform support is available:
