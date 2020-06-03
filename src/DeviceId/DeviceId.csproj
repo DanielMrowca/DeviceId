@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>DeviceId</PackageId>
+    <Title>DeviceId</Title>
+    <Description>Provides functionality to generate a 'device ID' that can be used to uniquely identify a computer.</Description>
+    <Authors>Matthew King</Authors>
+    <Copyright>Copyright Matthew King.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/MatthewKing/DeviceId</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MatthewKing/DeviceId</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>deviceid;unique;device;identifier</PackageTags>
+    <VersionPrefix>5.1.0</VersionPrefix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>net40;netstandard2.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>DeviceId.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Management" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="4.6.0" />
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+    <PackageReference Include="System.Text.Json" Version="4.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="*.snk">
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+
+</Project>
